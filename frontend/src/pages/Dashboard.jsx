@@ -76,10 +76,10 @@ export default function Dashboard() {
 
   const top6 = [...vendorScores].sort((a, b) => Number(b.vendor_score) - Number(a.vendor_score)).slice(0, 6);
 
-  const textColor = themeColor('--text', '#2d2a26');
-  const mutedColor = themeColor('--text-muted', '#6f5f53');
-  const gridColor = themeColor('--shadow-dark', 'rgba(61,50,41,0.18)');
-  const accentColor = themeColor('--accent', '#c4755d');
+  const textColor = themeColor('--text', '#1c2926');
+  const mutedColor = themeColor('--text-muted', '#66756f');
+  const gridColor = themeColor('--shadow-dark', 'rgba(120,110,90,0.28)');
+  const accentColor = themeColor('--accent', '#0f766e');
 
   const barData = {
     labels: top6.map(v => v.vendor_name),
@@ -87,7 +87,7 @@ export default function Dashboard() {
       label: 'Vendor Score',
       data: top6.map(v => Number(v.vendor_score || 0)),
       backgroundColor: accentColor,
-      hoverBackgroundColor: themeColor('--accent-hover', '#d4826b'),
+      hoverBackgroundColor: themeColor('--accent-hover', '#0d9488'),
       borderRadius: 6,
       maxBarThickness: 42
     }]
@@ -134,7 +134,7 @@ export default function Dashboard() {
 
   const donutData = hasStageData ? {
     labels: Object.keys(stageCounts),
-    datasets: [{ data: Object.values(stageCounts), backgroundColor: ['#2563eb', '#22c55e', '#f59e0b', '#10b981', '#ef4444'], borderWidth: 2, borderColor: themeColor('--card', '#ede4d9') }]
+    datasets: [{ data: Object.values(stageCounts), backgroundColor: ['#0f766e', '#d97706', '#2f855a', '#0e7490', '#e11d48'], borderWidth: 2, borderColor: themeColor('--card', '#ffffff') }]
   } : null;
   const donutOptions = {
     responsive: true,

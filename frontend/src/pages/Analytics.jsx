@@ -292,10 +292,10 @@ export default function Analytics() {
   const trend = buildTrend(reviews);
   const aspects = analyzeAspects(reviews);
 
-  const textColor = themeColor('--text', '#2d2a26');
-  const mutedColor = themeColor('--text-muted', '#6f5f53');
-  const gridColor = themeColor('--shadow-dark', 'rgba(61,50,41,0.18)');
-  const accentColor = themeColor('--accent', '#c4755d');
+  const textColor = themeColor('--text', '#1c2926');
+  const mutedColor = themeColor('--text-muted', '#66756f');
+  const gridColor = themeColor('--shadow-dark', 'rgba(120,110,90,0.28)');
+  const accentColor = themeColor('--accent', '#0f766e');
 
   const trendData = {
     labels: trend.labels,
@@ -303,7 +303,7 @@ export default function Analytics() {
       label: 'Avg Vendor Score',
       data: trend.data,
       borderColor: accentColor,
-      backgroundColor: themeColor('--accent2', '#7a8b6e'),
+      backgroundColor: themeColor('--accent2', '#d97706'),
       borderWidth: 3,
       tension: 0.35,
       fill: true,

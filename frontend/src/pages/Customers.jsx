@@ -61,8 +61,8 @@ export default function Customers() {
       </div>
       <div className="mini-stats">
         <div>Total Customers: <b>{customers.length}</b></div>
-        <div>Active: <b style={{ color: '#22c55e' }}>{active}</b></div>
-        <div>Inactive: <b style={{ color: '#ef4444' }}>{inactive}</b></div>
+        <div>Active: <b style={{ color: '#2f855a' }}>{active}</b></div>
+        <div>Inactive: <b style={{ color: '#e11d48' }}>{inactive}</b></div>
       </div>
       <h2>Vendor Customers</h2>
       <div className="table-wrapper">
