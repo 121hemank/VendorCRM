@@ -59,5 +59,5 @@ npm run test:e2e  # end-to-end tests (Playwright)
 
 ## Deployment
 
-- Frontend: https://vencrm.vercel.app/
+- Frontend: https://vencrm.vercel.app
 - Backend API: hosted on Render
