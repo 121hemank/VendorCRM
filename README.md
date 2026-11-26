@@ -2,7 +2,7 @@
 
 A full-stack CRM system that combines vendor, lead, and sales pipeline management with AI-driven sentiment analysis of customer feedback.
 
-**Live Demo:** https://vencrm.vercel.app/
+**Live Demo:** https://vencrm.vercel.app
 
 ## Features
 
