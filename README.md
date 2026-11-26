@@ -2,7 +2,7 @@
 
 A full-stack CRM system that combines vendor, lead, and sales pipeline management with AI-driven sentiment analysis of customer feedback.
 
-**Live Demo:** https://epics-pied.vercel.app/
+**Live Demo:** https://vencrm.vercel.app/
 
 ## Features
 
@@ -59,5 +59,5 @@ npm run test:e2e  # end-to-end tests (Playwright)
 
 ## Deployment
 
-- Frontend: https://epics-pied.vercel.app/
+- Frontend: https://vencrm.vercel.app/
 - Backend API: hosted on Render
