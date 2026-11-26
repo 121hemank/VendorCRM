@@ -86,14 +86,17 @@ export const ASPECTS = [
   { key: "accuracy", label: "Item Accuracy", keywords: ["accurate", "incorrect", "wrong item", "as described", "matched", "mismatch", "description", "exactly what"] },
   { key: "support", label: "Customer Support", keywords: ["support", "service", "responsive", "response", "helpful", "courteous", "assist"] },
   { key: "quality", label: "Product Quality", keywords: ["quality", "durable", "well made", "broken", "defective", "flawless", "poor quality", "craftsmanship", "material"] },
-  { key: "communication", label: "Communication", keywords: ["communication", "update", "informed", "replied", "follow up", "follow-up", "message", "proactive"] }
+  { key: "communication", label: "Communication", keywords: ["communication", "update", "informed", "replied", "follow up", "follow-up", "message", "proactive"] },
+  { key: "general", label: "Overall Experience", keywords: [] }
 ];
 
 export function analyzeAspects(reviews) {
   return ASPECTS.map(a => {
-    const matched = (reviews || []).filter(r =>
-      a.keywords.some(k => (r.customer_review || "").toLowerCase().includes(k))
-    );
+    const matched = a.key === "general"
+      ? (reviews || [])
+      : (reviews || []).filter(r =>
+        a.keywords.some(k => (r.customer_review || "").toLowerCase().includes(k))
+      );
     const avg = matched.length
       ? matched.reduce((s, r) => s + Number(r.rating || 0), 0) / matched.length
       : 0;

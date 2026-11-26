@@ -7,7 +7,8 @@ import {
   getPriorityBadge,
   getStageBadgeClass,
   getStatusBadgeClass,
-  getVendorStatusBadgeClass
+  getVendorStatusBadgeClass,
+  analyzeAspects
 } from '../../utils/helpers';
 
 describe('formatDateTime', () => {
@@ -134,5 +135,17 @@ describe('getVendorStatusBadgeClass', () => {
   it('defaults to active', () => {
     const result = getVendorStatusBadgeClass(null);
     expect(result).toContain('vendor-active');
+  });
+});
+
+describe('analyzeAspects', () => {
+  it('counts every review toward overall experience even without keywords', () => {
+    const result = analyzeAspects([
+      { customer_review: 'Nice', rating: 4 },
+      { customer_review: 'Okay', rating: 2 }
+    ]);
+    const overall = result.find(a => a.key === 'general');
+    expect(overall.count).toBe(2);
+    expect(overall.pct).toBe(60);
   });
 });

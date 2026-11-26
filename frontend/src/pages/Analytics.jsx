@@ -459,15 +459,15 @@ export default function Analytics() {
         <div className="chart-box">
           <h3>Historical Review Trends</h3>
           <div className="chart-canvas-wrap">
-            {trend.labels.length > 1
+            {reviews.length > 0
               ? <Line data={trendData} options={trendOptions} />
-              : <p className="chart-empty">Add more reviews over time to see score trends.</p>}
+              : <p className="chart-empty">No reviews yet. Submit or upload reviews to see score trends.</p>}
           </div>
         </div>
         <div className="chart-box">
           <h3>Aspect-Based Rating Breakdown</h3>
-          {aspects.every(a => a.count === 0)
-            ? <p className="chart-empty">No aspect mentions found yet. Submit reviews to populate.</p>
+          {reviews.length === 0
+            ? <p className="chart-empty">No reviews yet. Submit or upload reviews to populate.</p>
             : (
               <div className="aspect-list">
                 {aspects.map(a => (
