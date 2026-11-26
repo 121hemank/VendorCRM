@@ -33,7 +33,7 @@ export default function Performance() {
     datasets: [{
       label: 'Vendor Score',
       data: top6.map(v => Number(v.vendor_score || 0)),
-      backgroundColor: ['#0f766e', '#d97706', '#2f855a', '#0e7490', '#e11d48', '#14b8a6'],
+      backgroundColor: ['#2563eb', '#22c55e', '#f59e0b', '#7c3aed', '#ef4444', '#06b6d4'],
       borderWidth: 1
     }]
   };
@@ -46,7 +46,7 @@ export default function Performance() {
 
   const donutData = hasSentiment ? {
     labels: ['Positive', 'Neutral', 'Negative'],
-    datasets: [{ data: [pos, neu, neg], backgroundColor: ['#2f855a', '#d97706', '#e11d48'], borderWidth: 1 }]
+    datasets: [{ data: [pos, neu, neg], backgroundColor: ['#22c55e', '#f59e0b', '#ef4444'], borderWidth: 1 }]
   } : null;
 
   const top5 = [...vendorScores].sort((a, b) => Number(b.vendor_score) - Number(a.vendor_score)).slice(0, 5);
